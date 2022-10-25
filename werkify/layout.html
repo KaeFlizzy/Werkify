@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {color: #00bfff; font-size: 18px; text-align: center;}
+        .topbar{display: grid;grid-template-columns: 100px auto; background-color: white;}
+        .container{display: flex; justify-content: center; align-items: center; padding: 50px;background-image: url(images/bgimg.jpg);}
+        .form-group{margin: 20px auto;}
+        .panel-body{border:1px solid #00bfff; padding: 50px; border-radius: 10px; background-color: white;}
+        input{ margin-left: 20px; border: 2px solid #00bfff; border-radius: 10px; text-align: left;}
+        .btnSubmit{padding: 10px 20px; border: none; border-radius: 0px; color: aliceblue; background-color: #00bfff;}
+        h1 {font-size: 25px;}
+      label {font-size:larger}
+    </style>
+</head>
+<body>
+    <div class="topbar">
+       <span><img src ="images/logo.jpeg" height="100px"></span> 
+        <span style="text-align: left;"><h1 style="text-align: left;">WERKIFY</h1>
+            <p style="text-align: left;">Your Human Resource Manager</p></span>
+ </div>
+            <div class="container">
+              
+          <div class="panel-body"> 
+            <h1>Registration Form</h1>
+             <form action="signUp2.php" method="post"> 
+             <div class="form-group">
+                  <label for="userName">Username</label><br>
+                   <input type="text" class="form-control" id="userName" name="userName" /> 
+             </div>
+             <div class="form-group">
+                  <label for="firstName">First Name</label><br>
+                   <input type="text" class="form-control" id="firstName" name="firstName" /> 
+             </div>
+              <div class="form-group"> 
+                 <label for="lastName">Last Name</label> <br>
+                 <input type="text" class="form-control" id="lastName" name="lastName" />
+              </div> 
+              <div class="form-group"> 
+                 <label for="gender">Gender</label> <br>
+                 <div> <label for="male" class="radio-inline" >
+                     <input type="radio" name="gender" value="m" id="male" />Male</label >
+                      <label for="female" class="radio-inline" >
+                     <input type="radio" name="gender" value="f" id="female" />Female</label > 
+                     <label for="others" class="radio-inline" ><input type="radio" name="gender" value="o" id="others" />Others</label >
+                  </div> 
+                     </div> 
+                  <div class="form-group"> 
+                     <label for="email">Email</label> <br>
+                     <input type="text" class="form-control" id="email" name="email" /> </div> 
+                     <div class="form-group"> 
+                     <label for="password">Password</label> <br>
+                     <input type="password" class="form-control" id="password" name="password" /> </div> 
+                     <div class="form-group"> 
+                     <label for="number">Phone Number</label> <br>
+                     <input type="number" class="form-control" id="number" name="number" /> </div> 
+                     <input type="submit" class="btnSubmit" value="Create New Account" />
+                  </form> 
+                 </div> 
+                </div>
+ 
+</body>
+</html>

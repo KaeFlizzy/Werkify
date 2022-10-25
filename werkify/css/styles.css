@@ -1,0 +1,60 @@
+/* body{
+    box-sizing: border-box;
+    width: 100%;
+} */
+.topbar{
+    display: grid;
+    grid-template-columns: 10% 45% 16% 10% 5% 5% 5% 5%;
+    background-color: white;
+    color: #00bfff;
+    padding: 10px 20px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 5% 90%;
+    align-items: baseline;
+}
+.right-dashboard {
+    display:  grid;
+    grid-template-columns: 50% 50%;
+    width: 100%
+}
+
+.Inbox, .Task, .Goal, .Planner {
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin : 20px;
+    padding: 10px;
+}
+.left-dashboard {
+    background-color: #00bfff;
+    height: 90vh;
+    text-align: center;
+}
+.topbar .icon img {
+    width: 40px;
+    height: 40px;
+}
+.search {
+    margin-top: 3px;
+    width: 200px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    height: 20px;
+}
+.icon button {
+    padding: 8px 20px;
+    color: white;
+    background-color: orange;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.icon button:hover {
+    cursor: pointer;
+}
+.container  .left-dashboard p img{
+    width: 40px;
+}
+.icon {
+    margin: 20px auto;
+}
