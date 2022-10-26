@@ -26,7 +26,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <div class="container">
             <div class="left-dashboard">
                 <p id="l-icon"><img src="images/icon1.png" ></p><p class="sub" id="subhidden">Add</p>
-                <a href="register.php"><p id="l-icon2"><img src="images/icon2.png" ></p><p class="sub" id="subhidden2">Register</p></a>
+                <a href="register.php"><p id="l-icon2"><img src="images/icon2.png" ><p class="sub" id="subhidden2">Register</p></p></a>
                 <a href="updateEmployee.php"><p id="l-icon3"><img src="images/icon3.png" ><p class="sub" id="subhidden3">Manage</p></p></a>
                 <p><img src="images/icon4.png" ><p class="sub" id="subhidden">Organisation</p></p>
                 <p><img src="images/icon5.png" ><p class="sub" id="subhidden">Add</p></p>

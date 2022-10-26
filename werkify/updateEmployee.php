@@ -13,14 +13,14 @@ $result = mysqli_query($conn,"SELECT empID, username, job, department FROM emplo
 if (mysqli_num_rows($result) > 0) {
 ?>
 <div>
-<span><img src="images/logo.jpeg"></span><span><h1>COMPANY NAME</h1></span>
+<span><img src="images/logo.jpeg" height="80px"></span><span><h1>COMPANY NAME</h1></span>
 </div>
 <table>
 	  <tr>
-	    <th>empID</th>
-		<th>username</th>
-		<th>job</th>
-		<th>department</th>
+	    <th>Employee ID</th>
+		<th>Username</th>
+		<th>Job</th>
+		<th>Department</th>
 		<!-- <td>Email id</td>-->
 		<th colspan="2">Action</th> 
 	  </tr>
