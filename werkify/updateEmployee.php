@@ -12,6 +12,9 @@ $result = mysqli_query($conn,"SELECT empID, username, job, department FROM emplo
 <?php
 if (mysqli_num_rows($result) > 0) {
 ?>
+<div>
+<span><img src="images/logo.jpeg"></span><span><h1>COMPANY NAME</h1></span>
+</div>
 <table>
 	  <tr>
 	    <td>empID</td>

@@ -11,6 +11,9 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <title>Document</title>
 </head>
 <body>
+<div>
+<span><img src="images/logo.jpeg" height="100px"></span><span><h1>COMPANY NAME</h1></span><span>Back</span>
+</div>
     <div>
     <h1>REGISTER EMPLOYEES</h1>
     <form action="register2.php" method="post" onsubmit="return confirm('Do you want to submit this form?');">

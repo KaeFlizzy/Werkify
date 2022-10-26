@@ -13,23 +13,23 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </head>
 <body>
     <div class="topbar">
-    <span class="icon"><img  src="images/profile.png" ></span>
+    <span class="icon"><img  src="images/logo.jpeg" height="150px" ></span>
         <span style="font-size:24px;font-weight:bold;">COMPANY NAME</span>
         <span><input type="text" placeholder="Search....." class=" search"></span>
         <span class="icon"><button>SEARCH</button></span>
-        <span class="icon"><img  src="images/mail.png" ></span>
-        <span class="icon"><img  src="images/help.png" ></span>
-        <span class="icon"><img  src="images/settings.png" ></span>
+        <span class="icon"><img  src="images/inbox1.png" ></span>
+        <span class="icon"><img  src="images/help3.png" ></span>
+        <span class="icon"><img  src="images/setting1.png" ></span>
         <span class="icon"><img  src="images/profile.png" ></span>
 
     </div>
         <div class="container">
             <div class="left-dashboard">
-                <a href="register.php"><p><img src="images/icon1.png" ></p></a>
-                <a href="updateEmployee.php"><p><img src="images/icon2.png" ></p></a>
-                <p><img src="images/icon3.png" ></p>
-                <p><img src="images/icon4.png" ></p>
-                <p><img src="images/icon5.png" ></p>
+                <p id="l-icon"><img src="images/icon1.png" ></p><p class="sub" id="subhidden">Add</p>
+                <a href="register.php"><p id="l-icon2"><img src="images/icon2.png" ></p><p class="sub" id="subhidden2">Register</p></a>
+                <a href="updateEmployee.php"><p id="l-icon3"><img src="images/icon3.png" ><p class="sub" id="subhidden3">Manage</p></p></a>
+                <p><img src="images/icon4.png" ><p class="sub" id="subhidden">Organisation</p></p>
+                <p><img src="images/icon5.png" ><p class="sub" id="subhidden">Add</p></p>
 </div>
             <div class="right-dashboard">
                 <div><h2>&nbsp;&nbsp;&nbsp;DashBoard<h2></div>
@@ -51,6 +51,14 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 
 </div>
 </div>
+<script type="text/javascript" src="register.js">
+    // const hid = document.getElementsByClassName("l-icon")
+    // hid.addEventListener('mouseover',()=>{
+    //     document.getElementsByClassName('subhidden').ClassName='sub'
+    //     console.log('Button hover')
+    // })
+
+    </script>
 </body>
 </html>
 <?php

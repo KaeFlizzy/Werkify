@@ -11,7 +11,7 @@
     
     <div class="topbar">
         <h2>WERKIFY</h2>
-        <p>Your Human Resource Manager</p>
+        <p style="color: #00bfff;">Your Human Resource Manager</p>
         </div>
         <div class="container">
     <form action="login.php" method="post">
