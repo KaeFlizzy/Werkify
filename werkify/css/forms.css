@@ -1,0 +1,8 @@
+.topbar{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: white;
+    color: #00bfff;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 5px 2px gray;
+}
