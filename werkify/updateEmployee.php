@@ -17,12 +17,12 @@ if (mysqli_num_rows($result) > 0) {
 </div>
 <table>
 	  <tr>
-	    <td>empID</td>
-		<td>username</td>
-		<td>job</td>
-		<td>department</td>
+	    <th>empID</th>
+		<th>username</th>
+		<th>job</th>
+		<th>department</th>
 		<!-- <td>Email id</td>-->
-		<td colspan="2">Action</td> 
+		<th colspan="2">Action</th> 
 	  </tr>
 			<?php
 			$i=0;
