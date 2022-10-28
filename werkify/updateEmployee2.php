@@ -1,10 +1,10 @@
 <?php
 include_once 'db_conn.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE employee set empID='" . $_POST['empID'] . "', username='" . $_POST['username'] . "', job='" . $_POST['job'] . "',department='" . $_POST['department'] . "' WHERE empID='" . $_POST['empID'] . "'");
+mysqli_query($conn,"UPDATE employee set empID='" . $_POST['empID'] ."', name='" . $_POST['name'] ."', username='" . $_POST['username'] . "', job='" . $_POST['job'] . "',department='" . $_POST['department'] . "' WHERE empID='" . $_POST['empID'] . "'");
 $message = "Record Modified Successfully";
 }
-$sql="SELECT empID,username,job,department FROM employee WHERE empID = '" . $_GET['id'] . "'";
+$sql="SELECT empID, name, username,job,department FROM employee WHERE empID = '" . $_GET['id'] . "'";
 $result = mysqli_query($conn,$sql);
 $row= mysqli_fetch_array($result);
 ?>
@@ -23,6 +23,9 @@ empID: <br>
 <input type="hidden" name="empID" class="txtField" value="<?php echo $row['empID']; ?>">
 <input type="text" name="empID"  value="<?php echo $row['empID']; ?>">
 <br>
+Full Name : <br>
+<input type="text" name="name" class="txtField" value="<?php echo $row['name']; ?>">
+<br>
 Username : <br>
 <input type="text" name="username" class="txtField" value="<?php echo $row['username']; ?>">
 <br>
@@ -34,7 +37,8 @@ Department :<br>
 <br>
 
 <input type="submit" name="submit" value="Submit" class="button">
-
+<br>
+<td><a href="deleteEmployee2.php?id=<?php echo $row["empID"]; ?>">Delete Record</a></td>
 </form>
 </body>
 </html>

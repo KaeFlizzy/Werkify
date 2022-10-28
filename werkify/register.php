@@ -13,7 +13,10 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </head>
 <body>
 <div>
-<span><img src="images/logo.jpeg" height="100px"></span><span><h1>COMPANY NAME</h1></span><span>Back</span>
+<span><img src="images/logo.jpeg" height="100px"></span><span><h1>COMPANY NAME</h1></span>
+<form>
+ <input type="button" value="Back" onclick="history.back()">
+</form>
 </div>
     <div>
     <h1>REGISTER EMPLOYEES</h1>

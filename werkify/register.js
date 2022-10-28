@@ -10,6 +10,7 @@
 const hid = document.getElementById('l-icon')
 const hid2 = document.getElementById('l-icon2')
 const hid3 = document.getElementById('l-icon3')
+const hid4 = document.getElementById('l-icon4')
 const sub = document.getElementById('subhidden')
 const sub2 = document.getElementById('subhidden2')
 const sub3 = document.getElementById('subhidden3')
@@ -36,4 +37,11 @@ hid3.addEventListener('mouseover',()=>{
 })
 hid3.addEventListener('mouseleave',()=>{
     sub3.id='subhidden'
+})
+hid4.addEventListener('mouseover',()=>{
+    sub4.id='sub'
+    console.log('Button hover')
+})
+hid4.addEventListener('mouseleave',()=>{
+    sub4.id='subhidden'
 })
