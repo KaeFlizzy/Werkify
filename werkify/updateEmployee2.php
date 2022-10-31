@@ -34,6 +34,9 @@ $row= mysqli_fetch_array($result);
 <div style="padding-bottom:5px;">
 <a href="viewEmployee.php">Employee List</a>
 </div>
+<!-- Full Name : <br>
+<input type="file" name="pic" class="txtField" value="<?php echo $row['pic']; ?>">
+<br> -->
 empID: <br>
 <input type="hidden" name="empID" class="txtField" value="<?php echo $row['empID']; ?>">
 <input type="text" name="empID"  value="<?php echo $row['empID']; ?>">

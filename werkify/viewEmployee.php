@@ -14,10 +14,12 @@ $result = mysqli_query($conn,"SELECT * FROM employee");
  <input type="button" value="Back" onclick="history.back()">
 </form>
 <?php
+
 if (mysqli_num_rows($result) > 0) {
 ?>
   <table>
   <tr>
+  <!-- <td>pic</td> -->
     <td>empID</td>
     <td>Name</td>
     <td>Username</td>
@@ -34,10 +36,13 @@ if (mysqli_num_rows($result) > 0) {
     <td>Account Number</td>
   </tr>
 <?php
-$i=0;
+// $i=0;
+// $images = array();
 while($row = mysqli_fetch_array($result)) {
+  // $images[] = $row['pic'];
 ?>
 <tr>
+<!-- <td><?php //  echo '<img src="data:pic/jpeg;base64,'. base64_encode($i) .'" />'; ?></td> -->
     <td><?php echo $row["empID"]; ?></td>
     <td><?php echo $row["Name"]; ?></td>
     <td><?php echo $row["username"]; ?></td>
