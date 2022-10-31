@@ -36,7 +36,7 @@ if (mysqli_num_rows($result) > 0) {
     <td>Account Number</td>
   </tr>
 <?php
-// $i=0;
+$i=0;
 // $images = array();
 while($row = mysqli_fetch_array($result)) {
   // $images[] = $row['pic'];
@@ -59,7 +59,7 @@ while($row = mysqli_fetch_array($result)) {
     <td><?php echo $row["Account"]; ?></td>
 </tr>
 <?php
-// $i++;
+$i++;
 }
 ?>
 </table>

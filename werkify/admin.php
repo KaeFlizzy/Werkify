@@ -1,7 +1,11 @@
 <?php
-session_start();
-if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+//session_start();
+//if(isset($_SESSION['adminid']) && isset($_SESSION['username'])) {
+include_once 'db_conn.php';
+$result = mysqli_query($conn,"SELECT adminId FROM admin");
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +16,13 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <title>Werkify</title>
 </head>
 <body>
+<?php
+if (mysqli_num_rows($result) > 0) {
+    
+			$i=0;
+			while($row = mysqli_fetch_array($result)) {
+			
+?>
     <div class="topbar">
     <span class="icon"><img  src="images/logo.jpeg" height="150px" ></span>
         <span style="font-size:24px;font-weight:bold;">COMPANY NAME</span>
@@ -20,9 +31,14 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <span class="icon"><img  src="images/inbox1.png" ></span>
         <span class="icon"><img  src="images/help3.png" ></span>
         <span class="icon"><img  src="images/setting1.png" ></span>
-        <span class="icon"><img  src="images/profile.png" ></span>
+        <a href="adminprofile.php?id=<?php echo $row["adminId"]; ?>"><span class="icon"><img  src="images/profile.png" ></span></a>
+        <!-- <span class="icon"><a href="adminprofile.php"><img  src="images/profile.png" ></a></span> -->
 
     </div>
+    <?php
+			$i++;
+			}
+			?>
         <div class="container">
             <div class="left-dashboard">
                 <p id="l-icon"><img src="images/icon1.png" ></p><p class="sub" id="subhidden">Add</p>
@@ -62,8 +78,15 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </body>
 </html>
 <?php
-} else {
-    header("Location: index.php");
-    exit();
 }
+else
+{
+    echo "No result found";
+}
+?>
+<?php
+//} else {
+    //header("Location: index.php");
+   // exit();
+//}
 ?>

@@ -89,7 +89,7 @@ Account Number :<br>
   const msg="Record Successfully Modified!"
 function confirm() {
   alert(msg)
-  window.location.assign("viewmployee.php")
+  window.location.assign("viewEmployee.php")
   console.log('Button CLicked') 
 }
 

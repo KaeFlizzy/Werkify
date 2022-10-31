@@ -45,13 +45,13 @@ include "db_conn.php";
                     <input type="text" class="form-control" id="email" name="email" /> </div> 
                     <div class="form-group"> 
                     <label >Nationality</label> 
-                    <input type="text" class="form-control"  name="password" /> </div> 
+                    <input type="text" class="form-control"  name="pnationality" /> </div> 
                     <div class="form-group"> 
                     <label>NIN</label> 
-                    <input type="text" class="form-control"  name="password" /> </div> 
+                    <input type="text" class="form-control"  name="nin" /> </div> 
                     <div class="form-group"> 
                     <label for="number">Phone Number</label> 
-                    <input type="number" class="form-control" id="number" name="number" /> </div> 
+                    <input type="number" class="form-control" id="number" name="contact" /> </div> 
                     <input type="submit" class="btn btn-primary" value="Create New Account" />
                  </form> 
                 </div> 
