@@ -8,7 +8,10 @@ name='" . $_POST['name'] ."',
   Gender='" . $_POST['Gender'] ."', 
   dob='" . $_POST['dob'] ."', 
   nin='" . $_POST['nin'] ."', 
-  Address='" . $_POST['Address'] ."', 
+  Address='" . $_POST['Address'] ."',
+  Contact='" . $_POST['Contact'] ."',
+  Email='" . $_POST['Email'] ."',
+  Nationality='" . $_POST['Nationality'] ."', 
   Job='" . $_POST['Job'] . "',
   Department='" . $_POST['Department'] . "',
   Education='" . $_POST['Education'] . "',
@@ -25,7 +28,7 @@ $row= mysqli_fetch_array($result);
 <title>Update Employee Data</title>
 </head>
 <body>
-<form name="frmUser" method="post" action="">
+<form name="frmUser" method="post" action="" onsubmit="confirm();">
 <div><?php if(isset($message)) { echo $message; } ?>
 </div>
 <div style="padding-bottom:5px;">
@@ -53,6 +56,15 @@ Address: <br>
 NIN: <br>
 <input type="text" name="nin" class="txtField" value="<?php echo $row['NIN']; ?>">
 <br>
+Contact: <br>
+<input type="text" name="Contact" class="txtField" value="<?php echo $row['Contact']; ?>">
+<br>
+Email: <br>
+<input type="text" name="Email" class="txtField" value="<?php echo $row['Email']; ?>">
+<br>
+Nationality: <br>
+<input type="text" name="Nationality" class="txtField" value="<?php echo $row['Nationality']; ?>">
+<br>
 Job Title :<br>
 <input type="text" name="Job" class="txtField" value="<?php echo $row['Job']; ?>">
 <br>
@@ -70,5 +82,14 @@ Account Number :<br>
 <br>
 <td><a href="deleteEmployee2.php?id=<?php echo $row["empID"]; ?>">Delete Record</a></td>
 </form>
+<script>
+  const msg="Record Successfully Modified!"
+function confirm() {
+  alert(msg)
+  window.location.assign("viewmployee.php")
+  console.log('Button CLicked') 
+}
+
+  </script>
 </body>
 </html>
