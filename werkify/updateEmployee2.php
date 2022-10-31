@@ -5,15 +5,15 @@ mysqli_query($conn,"UPDATE employee set
 empID= '" . $_POST['empID'] ."',
 name='" . $_POST['name'] ."',
  username='" . $_POST['username'] . "',
-  gender='" . $_POST['gender'] ."', 
+  Gender='" . $_POST['Gender'] ."', 
   dob='" . $_POST['dob'] ."', 
   nin='" . $_POST['nin'] ."', 
   Address='" . $_POST['Address'] ."', 
   Job='" . $_POST['Job'] . "',
   Department='" . $_POST['Department'] . "',
-  education='" . $_POST['education'] . "',
-  account='" . $_POST['account'] . "',
-  WHERE empID='" . $_POST['empID'] . "'");
+  Education='" . $_POST['Education'] . "',
+  Account='" . $_POST['Account'] . "'
+  WHERE empID='" . $_POST['empID'] . "';");
 $message = "Record Modified Successfully";
 }
 $sql="SELECT * FROM employee WHERE empID = '" . $_GET['id'] . "'";
@@ -42,7 +42,7 @@ Username : <br>
 <input type="text" name="username" class="txtField" value="<?php echo $row['username']; ?>">
 <br>
 Gender: <br>
-<input type="text" name="gender" class="txtField" value="<?php echo $row['Gender']; ?>">
+<input type="text" name="Gender" class="txtField" value="<?php echo $row['Gender']; ?>">
 <br>
 Date of Birth: <br>
 <input type="date" name="dob" class="txtField" value="<?php echo $row['DOB']; ?>">
@@ -60,10 +60,10 @@ Department :<br>
 <input type="text" name="Department" class="txtField" value="<?php echo $row['Department']; ?>">
 <br>
 Education Level :<br>
-<input type="text" name="education" class="txtField" value="<?php echo $row['Education']; ?>">
+<input type="text" name="Education" class="txtField" value="<?php echo $row['Education']; ?>">
 <br>
 Account Number :<br>
-<input type="text" name="account" class="txtField" value="<?php echo $row['Account']; ?>">
+<input type="text" name="Account" class="txtField" value="<?php echo $row['Account']; ?>">
 <br>
 
 <input type="submit" name="submit" value="Submit" class="button">
