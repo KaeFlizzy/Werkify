@@ -59,7 +59,7 @@ while($row = mysqli_fetch_array($result)) {
     <td><?php echo $row["Account"]; ?></td>
 </tr>
 <?php
-$i++;
+// $i++;
 }
 ?>
 </table>

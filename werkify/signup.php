@@ -17,23 +17,26 @@ include "db_conn.php";
          <div class="panel-body"> 
             <form action="signUp2.php" method="post"> 
             <div class="form-group">
-                 <label for="userName">Username</label>
-                  <input type="text" class="form-control" id="userName" name="userName" /> 
+                 <label for="userName">Full Name</label>
+                  <input type="text" class="form-control" id="userName" name="username" /> 
             </div>
             <div class="form-group">
-                 <label for="firstName">First Name</label>
-                  <input type="text" class="form-control" id="firstName" name="firstName" /> 
+                 <label for="firstName">Username</label>
+                  <input type="text" class="form-control" id="name" name="name" />
+                 
             </div>
+            
              <div class="form-group"> 
-                <label for="lastName">Last Name</label> 
-                <input type="text" class="form-control" id="lastName" name="lastName" />
+                <label>Password</label> 
+                <input type="password" class="form-control" id="password" name="password" />
+                <input type="checkbox" id="see" onclick="myFunction();"> See Password 
              </div> 
              <div class="form-group"> 
                 <label for="gender">Gender</label> 
                 <div> <label for="male" class="radio-inline" >
-                    <input type="radio" name="gender" value="m" id="male" />Male</label >
+                    <input type="radio" name="gender" value="Male" id="male" />Male</label >
                      <label for="female" class="radio-inline" >
-                    <input type="radio" name="gender" value="f" id="female" />Female</label > 
+                    <input type="radio" name="gender" value="Female" id="female" />Female</label > 
                     <label for="others" class="radio-inline" ><input type="radio" name="gender" value="o" id="others" />Others</label >
                  </div> 
                     </div> 
@@ -41,8 +44,11 @@ include "db_conn.php";
                     <label for="email">Email</label> 
                     <input type="text" class="form-control" id="email" name="email" /> </div> 
                     <div class="form-group"> 
-                    <label for="password">Password</label> 
-                    <input type="password" class="form-control" id="password" name="password" /> </div> 
+                    <label >Nationality</label> 
+                    <input type="text" class="form-control"  name="password" /> </div> 
+                    <div class="form-group"> 
+                    <label>NIN</label> 
+                    <input type="text" class="form-control"  name="password" /> </div> 
                     <div class="form-group"> 
                     <label for="number">Phone Number</label> 
                     <input type="number" class="form-control" id="number" name="number" /> </div> 
@@ -52,7 +58,17 @@ include "db_conn.php";
 </div>
                     
                    
-            
+<script>
+   function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+   
+   </script>
 </body>
 </html>
 
