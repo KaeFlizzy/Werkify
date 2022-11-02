@@ -6,7 +6,7 @@ $result = mysqli_query($conn,"SELECT * FROM admin WHERE adminid = '" . $_GET['id
 <!DOCTYPE html>
 <html>
  <head>
- <title> My Profile</title>
+ <title> My Profiles</title>
  </head>
 <body>
   <div><span><h1>MY PROFILE</h1></span></div>
