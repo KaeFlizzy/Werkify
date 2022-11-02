@@ -1,0 +1,178 @@
+*{
+	  margin :0;
+	  padding:0;
+	   }
+	 body{
+	      background-color: rgb(173, 216, 230);
+		  background-position:center;
+		  background-size:cover;
+		  font-family:sans-serif;
+		  magrgin-top:40px;
+		  }
+	#nav{height:90px;
+	     background:#838996;
+	    }
+	#nav H1{height:30px;
+	        text-align:center;
+			margin-top:30px
+			font-size:20px;
+	      }
+		  
+     #nav img{
+     	border-radius:5px;
+	      height:60px;
+		  width:60px;
+		  margin-top:10px;
+		  margin-left:15px;
+		  float:left;
+	 }
+		.employeedetails{
+	                  width:800px;
+					  background-color:rgb(54, 69, 79);
+					  margin:auto;
+					  color:#FFFFFF;
+					  pading:10px 0px 10px 0px;
+					  text-align:center;
+					  border-radius:15px 15px 0px 0px;
+	                  }
+     .main{
+	       background-color:rgb(115, 147, 179);
+		   width:800px;
+		   margin:auto;
+		   }
+	 form{
+	      padding:10px;
+		  }	
+		  .organization name{
+		  	position:relative;
+		   left:200px;
+		   top:-37px;
+		   line-height:30px;
+		   width:435px;
+		   border-radius:4px;
+		   padding:0 22px;
+		   font-size:16px;
+		   color:black;
+		  }
+.website{
+           position:relative;
+		   left:200px;
+		   top:-37px;
+		   line-height:30px;
+		   width:435px;
+		   border-radius:4px;
+		   padding:0 22px;
+		   font-size:16px;
+		   color:black;
+		   }
+    .department{
+           position:relative;
+		   left:200px;
+		   top:-37px;
+		   line-height:30px;
+		   width:435px;
+		   border-radius:4px;
+		   padding:0 22px;
+		   font-size:16px;
+		   color:black;
+		   }
+	.address{
+           position:relative;
+		   left:200px;
+		   top:-37px;
+		   line-height:30px;
+		   width:435px;
+		   border-radius:4px;
+		   padding:0 22px;
+		   font-size:16px;
+		   color:black;
+		   }
+.email{
+           position:relative;
+		   left:200px;
+		   top:-37px;
+		   line-height:30px;
+		   width:435px;
+		   border-radius:4px;
+		   padding:0 22px;
+		   font-size:16px;
+		   color:black;
+		   }
+.option{
+           position:relative;
+		   left:145px;
+		   top:-27px;
+		   line-height:30px;
+		   width:479px;
+		   border-radius:4px;
+		   padding:0 22px;
+		   font-size:16px;
+		   color:black;
+		   }
+.option option{
+               font-size:20px;
+			   }
+  
+.accountnumber{
+           position:relative;
+		   left:139px;
+		   top:-37px;
+		   line-height:30px;
+		   width:435px;
+		   border-radius:4px;
+		   padding:0 22px;
+		   font-size:16px;
+		   color:black;
+		   }
+  button{
+       background-color:#3BAF9F;
+	   display:block;
+	   margin:10px 0px 0px 10px;
+	   text-align:right-side;
+	   border-radius:12px;
+	   border:2px solid #366473;
+	   padding:14px 50px;
+	   outline:none;
+	   color:white;
+	   cursor:pointer;
+	   transition:0.25px;
+	   position: center;
+	   }
+button:hover{
+            background-color:rgb(54, 69, 79);
+			}
+  footer{
+	        background:#838996
+			height:auto;
+			margin:20px;
+			}
+			  footer{
+	background: lightskyblue;
+	height: auto;
+	margin: auto;
+}
+footer h4{
+	font-size: 17px;
+	text-align: center;
+	color: black;
+}
+#parent{
+	display: flex;
+	flex-direction: right;
+	width: 100%;
+}
+#child1,#child2{
+	min-width: 31%;
+	text-align: center;
+	height: fit-content;
+	margin-left: 5px;
+	color: black;
+	font-weight: bold;
+}
+#banner{
+	background-image: url(banner.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: backward;
+}
