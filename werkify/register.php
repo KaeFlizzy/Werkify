@@ -1,6 +1,6 @@
 <?php
-session_start();
-if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+// session_start();
+// if(isset($_SESSION['id']) && isset($_SESSION['username'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,8 +49,8 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </body>
 </html>
     <?php
-} else {
-    header("Location: index.php");
-    exit();
-}
+// } else {
+//     header("Location: index.php");
+//     exit();
+// }
 ?>

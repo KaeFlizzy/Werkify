@@ -1,0 +1,291 @@
+ <!doctype html>
+<html>
+ <head>
+   <title>Job Application</title>
+   <style type ="text/css">
+    *{
+	  margin :0;
+	  padding:0;
+	   }
+	 body{
+	      background-image: url(overhead-view-of-a-business-meeting-in-the-office.jpg);
+		  background-position:center;
+		  background-size:cover;
+		  font-family:sans-serif;
+		  magrgin-top:40px;
+		  }
+	#nav{height:90px;
+	     background:#838996;
+	    }
+	#nav H1{height:30px;
+	        text-align:center;
+			margin-top:30px
+			font-size:20px;
+	      }
+		  
+     #nav img{border-radius:5px;
+	      height:60px;
+		  width:60px;
+		  margin-top:10px;
+		  margin-left:15px;
+		  float:left;
+	 }
+	 .container{
+	      max-width:900px;
+		  margin:0 auto;
+          }
+	.apply_box{
+	      max-width:600px;
+		  padding:20px;
+		  background-color:rgb(115, 147, 179);
+		  margin: 0 auto;
+		  margin-top:50px;
+		  box-shadow: 4px 3px 5px rgba (1,1,1,0.1);
+		  border-radius:10px;
+		  text-align:center;
+		  } 
+	.form_container{
+	       margin-top:20px;
+		   display:grid;
+		   grid-template-columns:repeat(auto-fit,minmax(285px, 1fr));
+		   gap:30px;
+		   }
+	.form_control{
+	            display: flex;
+				flex-direction: column;
+				font-weight: bolder;
+				}
+	label{
+	     font-size:15px;
+		 margin-bottom:5px;
+		 }
+	input,
+	select,
+	textarea{
+	       padding: 6px 10px;
+		   border:1px solid #ccc;
+		   border-radius:4px
+		   font-size:15px
+		   }
+	input:focus{
+	       outline-color: rgb(38,0,255);
+		   }
+	  button{
+       background-color:#3BAF9F;
+	   display:block;
+	   margin:10px 0px 0px 10px;
+	   text-align:right-side;
+	   border-radius:12px;
+	   border:2px solid #366473;
+	   padding:14px 50px;
+	   outline:none;
+	   color:white;
+	   cursor:pointer;
+	   transition:0.25px;
+	   }
+button:hover{
+            background-color:rgb(54, 69, 79);
+			}
+    .texarea_control{
+	                grid-column:1/ span 2;
+					font-weight:bolder;
+					}
+	.textarea_control textarea{
+	width:100%;
+	}
+	@media (max-width:40px){
+	         .textarea_control{
+			    grid-column:1/span 1:
+				}
+	 .footer{
+	                grid-column:3/ span 2;
+					font-weight:bolder;
+					}
+	.footer footer{
+	width:100%;
+	}
+	 </style>
+	 </head>
+ <body>
+  <div id="nav">
+	     <img src="IMG_20221024_115626_845.jpg">
+		 <br>
+		 <H1> WERKIFY INFORMATION MANAGEMENT SYSTEM</H1>
+	<br>
+	</div>
+    <div class="container">
+	 <div class="apply_box">
+	   <h1>
+	     Job Application
+		</h1>
+	   <form action="">
+      <div class="form_container">
+	  <div class="form_control">
+	  <label for="first_name">First name</label>
+	  <input 
+	     id="first_name"
+		 name="first_name"
+		 placeholder="Enter First name"
+		 required
+		 />
+	</div>
+	<div class="form_control">
+	  <label for="lastt_name">Last name</label>
+	  <input 
+	     id="last_name"
+		 name="last_name"
+		 placeholder="Enter Last name"
+		 required
+		 />
+	</div>
+	  <div class="form_control">
+	    <label for"email"> Email</label>
+	  <input
+	      type="email"
+		  id="email"
+		  name="email"
+		  required
+		  />
+	</div>
+	 <div class="form_control">
+	    <label for"address"> Address</label>
+	  <input
+	      type="address"
+		  id="address"
+		  name="address"
+		  required
+		  />
+	</div>
+	  <div class="form_control">
+	   <label for="phone">Phone number</label>
+	   <input
+	   type="number"
+	   id="phone"
+	   name="phone"
+	   placeholder=" Enter number"
+	   required
+	   />
+	  </div>
+	   
+	   <div class="form_control">
+	    <label for"postname"> Post name</label>
+	  <input
+	      type="postname"
+		  id="postname"
+		  name="postname"
+		  required
+		  />
+	</div>
+	 <div class="form_control">
+	    <label for"nationality"> Nationality</label>
+	  <input
+	      type="nationality"
+		  id="nationality"
+		  name="nationality"
+		  required
+		  />
+	</div>
+	 <div class="form_control">
+	    <label for"date"> D.o.B</label>
+	  <input
+	      value="1900 -05-25"
+		  type="date"
+		  id="date"
+		  name="date"
+		  required
+		  />
+	</div>
+	<div class="name"> Gender</div>
+	  <select class="option" name="gender">
+	  <option disabled="disabled" selected="selected">--Choose option</option>
+	  <option> Female</option>
+	  <option> Male</option>
+	  </select>
+	 <div class="form_control">
+	    <label for"maritalstatus"> Marital Status</label>
+	  <input
+	      type="maritalstatus"
+		  id="maritalstatus"
+		  name="maritalstatus"
+		  required
+		  />
+		</div>
+	 
+	 <div class="form_control">
+	    <label for"reference"> First Reference</label>
+	  <input
+		  id="reference"
+		  name="reference"
+		  required
+		  />
+	</div>
+		 <div class="form_control">
+	    <label for"contact"> Reference Contact</label>
+	  <input
+	      type="number"
+		  id="contact"
+		  name="contact"
+		  required
+		  />
+	</div>
+	 <div class="form_control">
+	    <label for"references"> Second Reference</label>
+	  <input
+	      type="references"
+		  id="references"
+		  name="references"
+		  required
+		  />
+	</div>
+
+	 <div class="form_control">
+	    <label for"contacts"> Reference Contact</label>
+	  <input
+	      type="number"
+		  id="contacts"
+		  name="contacts"
+		  required
+		  />
+	</div>
+	 <div class="form_control">
+	  <label for="upload">Upload your documents plus CV</label>
+	  <input
+	    type="file"
+	    id="upload"
+	    name="upload"
+	    placeholder="upload"
+	    required/>
+	  </div>
+	  <button type="submit">Apply Now</button>
+	  <br>
+	  	  <footer>
+	     <footer>
+			<br><br><br>
+			<div id="parent">
+				<div id="child1">
+					<h6>Aboutus</h6>
+					<p>We are a system that enables<br> employees to get salary. <br>
+					<br>Also enables people to<br> apply for a job. </p>
+				</div>
+				<br>
+				<div id="child2">
+					<h7>Contact</h7>
+					<p>Contact us on<br>Tel 0774222076.<br>
+					<br> Facebook. 
+					<br>Twitter @werkify. 
+					<br>Whatsapp +256756857648
+					</p>
+			</div>
+			<br>
+			<h4>Copy rights &copy werkify, all rights reserved 2022.</h4>
+			</div>
+		</footer>
+	</div>
+	 </form>  
+</body>
+</html>
+
+
+
+
+
