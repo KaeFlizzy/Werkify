@@ -78,3 +78,6 @@
 #sub {
     display: block;
 }
+.error {
+    color: red;
+}

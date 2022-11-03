@@ -13,21 +13,34 @@
         <h2>WERKIFY</h2>
         <p style="color: #00bfff;">Your Human Resource Manager</p>
         </div>
-        <div class="container">
-    <form action="login.php" method="post">
+        <!-- <div class="container"> -->
+    <!-- <form action="login.php" method="post">
         <h2>LOGIN</h2>
-        <?php if(isset($_GET['error'])) { ?>
-        <p class="error"> <?php echo $_GET['error']; ?> </p>
-    <?php } ?>
+        <?//php if(isset($_GET['error'])) { ?>
+        <p class="error"> <?//php echo $_GET['error']; ?> </p>
+    <?php //} ?>
     <label> Username<br>
-    <input type="text" name="uname" placeholder="User Name"><br>
+    <input type="text" name="username" placeholder="User Name"><br>
         </label>
         <label>Password<br>
     <input type="password" name="password" placeholder="Password"><br>
         </label>
     <button type="submit">Login</button>
     <p><a href="signup.php">Create new Account</a></p>
-        </form>
+        </form> -->
+        <!-- </div> -->
+        
+        <div>
+            <div>
+                <h2>ADMIN</h2>
+            <button onclick="window.location.assign('login2.php')">Login</button>
+            <button onclick="window.location.assign('signup.php')">Sign Up</button>
+        </div>
+        <div>
+            <h2>USER</h2>
+            <button onclick="window.location.assign('login3.php')">Login</button>
+            <button onclick="window.location.assign('signup.php')">Sign Up</button>
+        </div>
         </div>
 </body>
 </html>

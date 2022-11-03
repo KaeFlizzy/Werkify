@@ -1,8 +1,8 @@
 <?php
-//session_start();
-//if(isset($_SESSION['adminid']) && isset($_SESSION['username'])) {
+session_start();
+if(isset($_SESSION['adminID']) && isset($_SESSION['username'])) {
 include_once 'db_conn.php';
-$result = mysqli_query($conn,"SELECT adminId FROM admin");
+$result = mysqli_query($conn,"SELECT adminID FROM admin WHERE adminid = '".$_GET['adminID']."' ");
 
 ?>
 
@@ -17,11 +17,11 @@ $result = mysqli_query($conn,"SELECT adminId FROM admin");
 </head>
 <body>
 <?php
-if (mysqli_num_rows($result) > 0) {
+// if (mysqli_num_rows($result) > 0) {
     
-			$i=0;
-			while($row = mysqli_fetch_array($result)) {
-			
+// 			$i=0;
+// 			while($row = mysqli_fetch_array($result)) {
+    $row = mysqli_fetch_array($result)
 ?>
     <div class="topbar">
     <span class="icon"><img  src="images/logo.jpeg" height="150px" ></span>
@@ -31,13 +31,13 @@ if (mysqli_num_rows($result) > 0) {
         <span class="icon"><img  src="images/inbox1.png" ></span>
         <span class="icon"><img  src="images/help3.png" ></span>
         <span class="icon"><img  src="images/setting1.png" ></span>
-        <a href="adminprofile.php?id=<?php echo $row["adminId"]; ?>"><span class="icon"><img  src="images/profile.png" ></span></a>
+        <span class="icon"><a href="adminprofile.php?id=<?php echo $row["adminID"]; ?>"><img  src="images/profile.png" ></a></span>
         <!-- <span class="icon"><a href="adminprofile.php"><img  src="images/profile.png" ></a></span> -->
 
     </div>
     <?php
-			$i++;
-			}
+			// $i++;
+			// }
 			?>
         <div class="container">
             <div class="left-dashboard">
@@ -78,15 +78,15 @@ if (mysqli_num_rows($result) > 0) {
 </body>
 </html>
 <?php
-}
-else
-{
-    echo "No result found";
-}
+// }
+// else
+// {
+//     echo "No result found";
+// }
 ?>
 <?php
-//} else {
-    //header("Location: index.php");
-   // exit();
-//}
+} else {
+    header("Location: index.php");
+   exit();
+}
 ?>

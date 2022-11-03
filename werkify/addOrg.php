@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+ <head>
+   <title>WERKIFY HUMAN RESOURCE SYSTEM</title>
+   <style type ="text/css">
+	</style> 
+   </head>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <body>
+     <div id="nav">
+	     <img src="logo2.jpg">
+		 <br>
+		 <H1> WERKIFY INFORMATION MANAGEMENT SYSTEM</H1>
+	<br>
+	</div>
+	<br>
+   <div class="employeedetails"><h1>Organization Details</h1></div>
+    <div class="main">
+	 <form action="addOrg2.php" method="post">
+      <h2 class="name">Organization Name</h2>
+	  <input class="address" type="text" name="orgName">
+      <h2 class="name">Organization Type</h2>
+	  <input class="address" type="text" name="orgType">
+	  
+	  <h2 class="name">Website</h2>
+	  <input class="website" type="text" name="website">
+      <h2 class="name">Account Number</h2>
+	  <input class="address" type="text" name="accountNo">
+	  
+	  <h2 class="name">Address</h2>
+	  <input class="address" type="text" name="address">
+      <h2 class="name">Contact</h2>
+	  <input class="address" type="text" name="contact">
+	  
+	  <h2 class="name">Email</h2>
+	  <input class="email" type="text" name="email">
+	  
+	  <!-- <h2 class="name">Department</h2>
+	  <select class="option" name="department">
+	  <option disabled="disabled" selected="selected">--Choose option</option>
+	  <option> Marketing and Sales</option>
+	  <option> Computing</option>
+	  <option> Secretarial</option>
+	  <option> Management</option>
+	  </select> -->
+	  
+	  <h2 class="name">Account <br>number</h2>
+	  <input class="accountnumber" type="text" name="accountNo">
+	  <button type="submit">Login</button>
+</td>
+</tr>
+</table>	  
+</form>
+</div>
+<br>
+	  <footer>
+	  	<div id="parent">
+				<div id="child1">
+					<h6>Aboutus</h6>
+					<p>We are a system that enables<br> employees to get salary. <br>Also enables people to<br> apply for a job. </p>
+				</div>
+				<div id="child2">
+					<h7>Contact</h7>
+					<p>Contact us on<br> Tel 0774222076.<br> Facebook. <br>Twitter @werkify. <br>Whatsapp +256756857648</p>
+				</div>
+			</div>
+			<br><br><br>
+			<h4>Copy rights &copy werkify, all rights reserved 2022.</h4>
+	  </footer>
+</body>
+</html>  

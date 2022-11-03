@@ -7,7 +7,7 @@
             $gender = $_POST['gender'];	
             $email = $_POST['email'];	
             $password = $_POST['password'];	
-            $number = $_POST['contact']; 	
+            $contact = $_POST['contact']; 	
             $nationality = $_POST['nationality'];
          
             // Database connection

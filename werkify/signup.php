@@ -45,7 +45,7 @@ include "db_conn.php";
                     <input type="text" class="form-control" id="email" name="email" /> </div> 
                     <div class="form-group"> 
                     <label >Nationality</label> 
-                    <input type="text" class="form-control"  name="pnationality" /> </div> 
+                    <input type="text" class="form-control"  name="nationality" /> </div> 
                     <div class="form-group"> 
                     <label>NIN</label> 
                     <input type="text" class="form-control"  name="nin" /> </div> 
