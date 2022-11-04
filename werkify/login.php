@@ -25,7 +25,7 @@ else if (empty($pass)) {
     header ("Location: login2.php?error=Password is required");
     exit();
 }
-$sql = "SELECT adminID, username, password, orgid FROM admin WHERE username='$uname' AND password='$pass'";
+$sql = "SELECT adminID, username, password, orgID FROM admin WHERE username='$uname' AND password='$pass'";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result)===1) {
@@ -41,6 +41,7 @@ if(mysqli_num_rows($result)===1) {
         exit();
         }else{
             header("Location: addOrg.php?adminID=". $row['adminID']."");
+            exit();
         }
     }
     else {

@@ -16,15 +16,17 @@ $custom_message='You have successfully, registered a new employee';
     VALUES ('$orgname','$orgtype','$account','$contact','$address','$website','$adminID')";
     
     $result = mysqli_query($conn, $sql);
-    $result2 = mysqli_query($conn, $sql2);
-
+    
             if (isset($result))
             {
               $sql2 = "SELECT * FROM organisation WHERE adminID='$adminID'";
-              $result = mysqli_query($conn,$sql);
-              $sql2 = "UPDATE admin SET orgid = '".$_POST['orgID']."' WHERE adminid =$adminID";
-              header("Location: admin.php?adminID=".$_GET['adminID']."");
-              
+              $result2 = mysqli_query($conn,$sql2);
+              $row = mysqli_fetch_array($result2);
+              $sql3 = "UPDATE admin SET orgid = '".$row['orgID']."' WHERE adminid =$adminID";
+              $result3 = mysqli_query($conn, $sql3);
+              if (isset($result3)){
+              header("Location: admin.php?adminID=".$adminID."");
+              } 
             }
 
 
