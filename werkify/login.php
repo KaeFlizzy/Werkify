@@ -13,6 +13,7 @@ if(isset ($_POST['username']) && isset($_POST['password'])) {
 
 $uname = validate($_POST['username']);
 $pass = validate($_POST['password']);
+
 // $uname=$_POST['username'];
 // $pass=$_POST['password'];
 
@@ -24,7 +25,7 @@ else if (empty($pass)) {
     header ("Location: login2.php?error=Password is required");
     exit();
 }
-$sql = "SELECT adminID, username, password FROM admin WHERE username='$uname' AND password='$pass'";
+$sql = "SELECT adminID, username, password, orgid FROM admin WHERE username='$uname' AND password='$pass'";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result)===1) {
@@ -34,8 +35,13 @@ if(mysqli_num_rows($result)===1) {
         $_SESSION['username'] = $row['username'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['adminID'] = $row['adminID'];
+        if(isset($row['orgID']))
+        {
         header("Location: admin.php?adminID=". $row['adminID']."");
         exit();
+        }else{
+            header("Location: addOrg.php?adminID=". $row['adminID']."");
+        }
     }
     else {
         header("Location: login2.php?error=Incorrect User Name or Password");

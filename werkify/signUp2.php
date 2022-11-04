@@ -22,7 +22,8 @@
                         if (isset($result))
                         {
                             echo("You have been successfully registered");
-                          header("Location: admin.php");
+    
+                          header("Location: index.php");
     
                         }
             }

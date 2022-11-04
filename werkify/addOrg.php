@@ -17,6 +17,8 @@
    <div class="employeedetails"><h1>Organization Details</h1></div>
     <div class="main">
 	 <form action="addOrg2.php" method="post">
+	 
+	  <input class="address" type="hidden" name="adminId" value="<?php echo $_GET['adminID']; ?>">
       <h2 class="name">Organization Name</h2>
 	  <input class="address" type="text" name="orgName">
       <h2 class="name">Organization Type</h2>
@@ -44,9 +46,8 @@
 	  <option> Management</option>
 	  </select> -->
 	  
-	  <h2 class="name">Account <br>number</h2>
-	  <input class="accountnumber" type="text" name="accountNo">
-	  <button type="submit">Login</button>
+	  
+	  <button type="submit">Register</button>
 </td>
 </tr>
 </table>	  
