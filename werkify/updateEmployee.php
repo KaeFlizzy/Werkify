@@ -1,11 +1,11 @@
 <?php
 include_once 'db_conn.php';
-$result = mysqli_query($conn,"SELECT empID, name, username, job, department FROM employee");
+$result = mysqli_query($conn,"SELECT empID, name, username, job, department FROM employee WHERE adminid='".$_GET['id']."'");
 ?>
 <!DOCTYPE html>
 <html>
  <head>
-   <title> Retrive data</title>
+   <title> Werkify-Update Employees</title>
    <!-- <link rel="stylesheet" href="style.css"> -->
  </head>
 <body>

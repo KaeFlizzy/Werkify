@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +13,9 @@
     
 <div>
         <h2>Departments</h2>
-        <button onclick="window.location.assign(deptAdd.php)">Add New Department</button>
-        <button onclick="window.location.assign(deptUpd.php)">Manage Departments</button>
- <button onclick="window.loaction.assign(deptView.php)">View Departments</button>
+        <button onclick="window.location.assign('deptAdd.php?id=<?php echo $_GET['id'] ?>')">Add New Department</button>
+        <button onclick="window.location.assign('deptUpdate.php?id=<?php echo $_GET['id'] ?>')">Manage Departments</button>
+        <button onclick="window.location.assign('deptView.php?id=<?php echo $_GET['id'] ?>')">View Departments</button>
     <div>
         <h2>Jobs</h2>
         <button onclick="window.location.assign(jobAdd.php)">Add New Job</button>
