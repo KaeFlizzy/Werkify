@@ -32,7 +32,7 @@ $row= mysqli_fetch_array($result);
 <div><?php if(isset($message)) { echo $message; } ?>
 </div>
 <div style="padding-bottom:5px;">
-<a href="viewEmployee.php">Employee List</a>
+<!-- <a href="viewEmployee.php?id=<?//php echo $row["adminID"]; ?>">Employee List</a> -->
 </div>
 <!-- Full Name : <br>
 <input type="file" name="pic" class="txtField" value="<?php echo $row['pic']; ?>">

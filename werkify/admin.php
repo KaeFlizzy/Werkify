@@ -41,10 +41,10 @@ $result = mysqli_query($conn,"SELECT adminID FROM admin WHERE adminid = '".$_GET
 			?>
         <div class="container">
             <div class="left-dashboard">
-                <p id="l-icon"><img src="images/icon1.png" ></p><p class="sub" id="subhidden">Add</p>
-                <a href="register.php"><p id="l-icon2"><img src="images/icon2.png" ><p class="sub" id="subhidden2">Register</p></p></a>
-                <a href="updateEmployee.php"><p id="l-icon3"><img src="images/icon3.png" ><p class="sub" id="subhidden3">Manage</p></p></a>
-               <a href="organization.php"> <p id="l-icon4"><img src="images/icon4.png" ><p class="sub" id="subhidden4">Organisation</p></p></a>
+                <p id="l-icon"><a href="viewEmployee.php?id=<?php echo $row["adminID"]; ?>"><img src="images/icon1.png" ></p><p class="sub" id="subhidden">Add</p>
+                <a href="register.php?id=<?php echo $row["adminID"]; ?>"><p id="l-icon2"><img src="images/icon2.png" ><p class="sub" id="subhidden2">Register</p></p></a>
+                <a href="updateEmployee.php?id=<?php echo $row["adminID"]; ?>"><p id="l-icon3"><img src="images/icon3.png" ><p class="sub" id="subhidden3">Manage</p></p></a>
+               <a href="organization.php?id=<?php echo $row["adminID"]; ?>"> <p id="l-icon4"><img src="images/icon4.png" ><p class="sub" id="subhidden4">Organisation</p></p></a>
                 <p><img src="images/icon5.png" ><p class="sub" id="subhidden">Add</p></p>
 </div>
             <div class="right-dashboard">

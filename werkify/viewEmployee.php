@@ -1,6 +1,6 @@
 <?php
 include_once 'db_conn.php';
-$result = mysqli_query($conn,"SELECT * FROM employee");
+$result = mysqli_query($conn,"SELECT * FROM employee WHERE adminid ='". $_GET['id']."'");
 ?>
 <!DOCTYPE html>
 <html>

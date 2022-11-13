@@ -21,7 +21,12 @@
     <div>
     <h1>REGISTER EMPLOYEES</h1>
     <form action="register2.php" method="post" onsubmit="return confirm('Do you want to submit this form?');">
-        <label>
+    <label>
+        <input type="hidden" name="empid" value="<?php echo $_GET['id'] ?>" placeholder="Enter your full name">
+             
+            <input type="hidden" name="adminid" value="<?php echo $_GET['id'] ?>" placeholder="Enter your full name">
+</label> 
+    <label>
             Name <br>
             <input type="text" name="username" placeholder="Enter your full name">
 </label>
