@@ -18,9 +18,9 @@
         <button onclick="window.location.assign('deptView.php?id=<?php echo $_GET['id'] ?>')">View Departments</button>
     <div>
         <h2>Jobs</h2>
-        <button onclick="window.location.assign(jobAdd.php)">Add New Job</button>
-        <button onclick="window.location.assign(jobUpd.php)">Manage Jobs</button>
- <button onclick="window.loaction.assign(jobView.php)">View Jobs</button>
+        <button onclick="window.location.assign('jobAdd.php?id=<?php echo $_GET['id'] ?>')">Add New Job</button>
+        <button onclick="window.location.assign('jobUpdate.php?id=<?php echo $_GET['id'] ?>')">Manage Jobs</button>
+ <button onclick="window.location.assign('jobView.php?id=<?php echo $_GET['id'] ?>')">View Jobs</button>
 </div> 
 <div>
         <h2 >Salary</h2>
