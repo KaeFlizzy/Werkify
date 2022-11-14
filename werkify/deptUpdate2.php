@@ -32,7 +32,7 @@ Department Name : <br>
 <br>
 Description : <br>
 <textarea name="description" class="txtField">
-    <?php echo $row['description'] ?>
+<?php echo $row['description'] ?>
 </textarea>
 <br>
 
@@ -40,7 +40,7 @@ Description : <br>
 
 <input type="submit" name="submit" value="Update" class="button">
 <br>
-<td><a href="deleteEmployee2.php?id=<?php echo $row["empID"]; ?>">Delete Record</a></td>
+<td><a href="deptDelete.php?id=<?php echo $row["deptId"]; ?>">Delete Record</a></td>
 </form>
 <script>
   const msg="Record Successfully Modified!"

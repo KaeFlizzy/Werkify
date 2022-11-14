@@ -3,7 +3,7 @@ include_once 'db_conn.php';
 
 
 $result = mysqli_query($conn,"SELECT department.deptName, department.adminId, job.jobId, job.jobName 
-FROM job INNER JOIN department ON job.deptID = department.deptID WHERE adminId ='". $_GET['id']."'");
+FROM job INNER JOIN department ON job.deptID = department.deptID WHERE job.adminId ='". $_GET['id']."'");
 ?>
 <!DOCTYPE html>
 <html>

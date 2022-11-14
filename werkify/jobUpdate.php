@@ -1,7 +1,7 @@
 <?php
 include_once 'db_conn.php';
-$result = mysqli_query($conn,"SELECT department.deptName as deptName ,department.adminId as adminId,job.jobId as jobId,job.jobName as jobName 
-FROM job INNER JOIN department ON job.deptID = department.deptID WHERE adminId ='". $_GET['id']."'");
+$result = mysqli_query($conn,"SELECT department.deptName as deptName ,job.adminId as adminId,job.jobId as jobId,job.jobName as jobName 
+FROM job INNER JOIN department ON job.deptID = department.deptID WHERE job.adminId ='". $_GET['id']."'");
 ?>
 <!DOCTYPE html>
 <html>

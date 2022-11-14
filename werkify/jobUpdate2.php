@@ -1,16 +1,25 @@
 <?php
-include_once 'db_conn.php';
+include 'db_conn.php';
+
+
 if(count($_POST)>0) {
 mysqli_query($conn,"UPDATE job set 
 jobId= '" . $_POST['jobId'] ."',
 jobName='" . $_POST['jobName'] ."',
-deptId='" . $_POST['deptId'] . "'
-  WHERE deptId='" . $_GET['deptId'] . "';");
+deptId='" . $deptId['deptId'] . "'
+  WHERE deptId='" . $_GET['jobId'] . "';");
 $message = "Record Modified Successfully";
 }
-$sql="SELECT * FROM department WHERE deptId = '" . $_GET['deptId'] . "'";
+$sql="SELECT * FROM job WHERE jobId = '" . $_GET['jobId'] . "'";
 $result = mysqli_query($conn,$sql);
 $row= mysqli_fetch_array($result);
+// $sql2="SELECT department.deptName as deptName ,department.adminId as adminId,job.jobId as jobId,job.jobName as jobName 
+// FROM job INNER JOIN department ON job.deptID = department.deptID WHERE job.adminId ='". $row['adminID']."'";
+// $row2= mysqli_fetch_array($conn,$sql2);
+$result2 = mysqli_query($conn,"SELECT * FROM department WHERE adminId = '" . $row['adminID'] . "'");
+// $row2 = mysqli_fetch_array($result2);
+$deptId= mysqli_query($conn,"SELECT * FROM department WHERE deptName = '" . $_POST['departmentName'] . "'");
+
 ?>
 <html>
 <head>
@@ -23,24 +32,36 @@ $row= mysqli_fetch_array($result);
 <div style="padding-bottom:5px;">
 <!-- <a href="viewEmployee.php?id=<?//php echo $row["adminID"]; ?>">Employee List</a> -->
 </div>
+<input type="hidden" name="deptId"  value="<?php echo $row['deptId']; ?>">
+Job ID: <br>
+<input type="text" name="jobId"  value="<?php echo $row['jobId']; ?>">
+<br>
+Job Title : <br>
+<input type="text" name="deptName" class="txtField" value="<?php echo $row['jobName']; ?>">
+<br>
+Department : <br>
+<select name="departmentName" class="txtField">
+    
+<?php
+$i=0;
+while($row2 = mysqli_fetch_array($result2)) {
+    ?>
+    <option>
+<?php echo $row2['deptName'] ?>
+</option>
+<?php
+$i++;
+}
 
-deptID: <br>
-<input type="text" name="deptId"  value="<?php echo $row['deptId']; ?>">
-<br>
-Department Name : <br>
-<input type="text" name="deptName" class="txtField" value="<?php echo $row['deptName']; ?>">
-<br>
-Description : <br>
-<textarea name="description" class="txtField">
-    <?php echo $row['description'] ?>
-</textarea>
+?>
+</select>
 <br>
 
 <input type="hidden" name="adminid" class="txtField" value="<?php echo $row['adminID']; ?>">
 
 <input type="submit" name="submit" value="Update" class="button">
 <br>
-<td><a href="deleteEmployee2.php?id=<?php echo $row["empID"]; ?>">Delete Record</a></td>
+<td><a href="jobDelete.php?id=<?php echo $row["jobId"]; ?>">Delete Record</a></td>
 </form>
 <script>
   const msg="Record Successfully Modified!"
@@ -53,3 +74,6 @@ function confirm() {
   </script>
 </body>
 </html>
+<?php
+
+?>

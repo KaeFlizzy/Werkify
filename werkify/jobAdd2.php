@@ -9,7 +9,7 @@ $deptId = $row['deptId'];
 $adminid= $_POST['adminid'];
 $custom_message='You have successfully, registered a new job';
 
-    $sql = "INSERT INTO job(jobName,deptId) VALUES ('$jobTitle','$deptId')";
+    $sql = "INSERT INTO job(jobName,deptId,adminId) VALUES ('$jobTitle','$deptId','$adminid')";
     $result = mysqli_query($conn, $sql);
 
             if (isset($result))
