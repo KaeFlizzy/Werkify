@@ -1,12 +1,11 @@
 <?php
 include_once 'db_conn.php';
-$result = mysqli_query($conn,"SELECT department.deptName as deptName ,department.adminId as adminId,job.jobId as jobId,job.jobName as jobName 
-FROM job INNER JOIN department ON job.deptID = department.deptID WHERE adminId ='". $_GET['id']."'");
+$result = mysqli_query($conn,"SELECT * FROM department WHERE adminid='".$_GET['id']."'");
 ?>
 <!DOCTYPE html>
 <html>
  <head>
-   <title> Werkify-Update Job</title>
+   <title> Werkify-Update Employees</title>
    <!-- <link rel="stylesheet" href="style.css"> -->
  </head>
 <body>
@@ -21,9 +20,9 @@ if (mysqli_num_rows($result) > 0) {
 </form>
 <table>
 	  <tr>
-	    <th>Job ID</th>
-		<th>Job Title</th>
-		<td>Department</td>
+	    <th>dept ID</th>
+		<th>Department Name</th>
+		<!-- <td>Email id</td>-->
 		<th colspan="2">Action</th> 
 	  </tr>
 			<?php
@@ -31,11 +30,10 @@ if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_array($result)) {
 			?>
 	  <tr>
-	    <td><?php echo $row["jobId"]; ?></td>
-		<td><?php echo $row["jobName"]; ?></td>
-        <td><?php echo $row["deptName"]; ?></td>
+	    <td><?php echo $row["deptId"]; ?></td>
+		<td><?php echo $row["deptName"]; ?></td>
 		
-		<td><a href="jobUpdate2.php?jobId=<?php echo $row["jobId"]; ?>">Manage</a></td>
+		<td><a href="deptUpdate2.php?deptId=<?php echo $row["deptId"]; ?>">Manage</a></td>
 		
       </tr>
 			<?php

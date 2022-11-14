@@ -1,10 +1,10 @@
 <?php
 include_once 'db_conn.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE job set 
-jobId= '" . $_POST['jobId'] ."',
-jobName='" . $_POST['jobName'] ."',
-deptId='" . $_POST['deptId'] . "'
+mysqli_query($conn,"UPDATE department set 
+deptId= '" . $_POST['deptId'] ."',
+deptName='" . $_POST['deptName'] ."',
+description='" . $_POST['description'] . "'
   WHERE deptId='" . $_GET['deptId'] . "';");
 $message = "Record Modified Successfully";
 }
