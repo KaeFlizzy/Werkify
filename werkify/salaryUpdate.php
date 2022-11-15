@@ -1,11 +1,11 @@
 <?php
 include_once 'db_conn.php';
-$result = mysqli_query($conn,"SELECT * FROM department WHERE adminid='".$_GET['id']."'");
+$result = mysqli_query($conn,"SELECT * FROM salary WHERE adminid='".$_GET['id']."'");
 ?>
 <!DOCTYPE html>
 <html>
  <head>
-   <title> Werkify-Update Employees</title>
+   <title> Werkify-Update Salary</title>
    <!-- <link rel="stylesheet" href="style.css"> -->
  </head>
 <body>
@@ -20,9 +20,12 @@ if (mysqli_num_rows($result) > 0) {
 </form>
 <table>
 	  <tr>
-	    <th>dept ID</th>
-		<th>Department Name</th>
-		<!-- <td>Email id</td>-->
+	    <th>salary ID</th>
+		<th>salary Description</th>
+		<th>Gross Amount</th>
+		<th>Allowances</th>
+		<th>Deductions</th>
+		<th>Net Salary</th>
 		<th colspan="2">Action</th> 
 	  </tr>
 			<?php
@@ -30,10 +33,14 @@ if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_array($result)) {
 			?>
 	  <tr>
-	    <td><?php echo $row["deptId"]; ?></td>
-		<td><?php echo $row["deptName"]; ?></td>
+	    <td><?php echo $row["salaryId"]; ?></td>
+		<td><?php echo $row["salaryDesc"]; ?></td>
+		<td><?php echo $row["amount"]; ?></td>
+		<td><?php echo $row["allowances"]; ?></td>
+		<td><?php echo $row["deductions"]; ?></td>
+		<td><?php echo $row["netSalary"]; ?></td>
 		
-		<td><a href="deptUpdate2.php?deptId=<?php echo $row["deptId"]; ?>">Manage</a></td>
+		<td><a href="salaryUpdate2.php?salaryId=<?php echo $row["salaryId"]; ?>">Manage</a></td>
 		
       </tr>
 			<?php

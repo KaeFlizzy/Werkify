@@ -1,20 +1,22 @@
 <?php
 include_once 'db_conn.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE department set 
-deptId= '" . $_POST['deptId'] ."',
-deptName='" . $_POST['deptName'] ."',
-description='" . $_POST['description'] . "'
-  WHERE deptId='" . $_GET['deptId'] . "';");
+mysqli_query($conn,"UPDATE salary set 
+salaryId= '" . $_POST['salaryId'] ."',
+salaryDesc='" . $_POST['salaryDesc'] ."',
+allowances='" . $_POST['allowances'] . "'
+amount='" . $_POST['amount'] . "'
+netSalary='" . $_POST['netSalary'] . "'
+  WHERE salaryId='" . $_GET['salaryId'] . "';");
 $message = "Record Modified Successfully";
 }
-$sql="SELECT * FROM department WHERE deptId = '" . $_GET['deptId'] . "'";
+$sql="SELECT * FROM salary WHERE salaryId = '" . $_GET['salaryId'] . "'";
 $result = mysqli_query($conn,$sql);
 $row= mysqli_fetch_array($result);
 ?>
 <html>
 <head>
-<title>Update Department Data</title>
+<title>Werkify - Update Salary Data</title>
 </head>
 <body>
 <form name="frmUser" method="post" action="" onsubmit="confirm();">
@@ -24,16 +26,23 @@ $row= mysqli_fetch_array($result);
 <!-- <a href="viewEmployee.php?id=<?//php echo $row["adminID"]; ?>">Employee List</a> -->
 </div>
 
-deptID: <br>
-<input type="text" name="deptId"  value="<?php echo $row['deptId']; ?>">
+salaryID: <br>
+<input type="text" name="deptId" class="txtField" value="<?php echo $row['salaryId']; ?>">
 <br>
-Department Name : <br>
-<input type="text" name="deptName" class="txtField" value="<?php echo $row['deptName']; ?>">
+Salary Description : <br>
+<input type="text" name="salaryDesc" class="txtField" value="<?php echo $row['salaryDesc']; ?>">
 <br>
-Description : <br>
-<textarea name="description" class="txtField">
-    <?php echo $row['description'] ?>
-</textarea>
+Gross Salary : <br>
+<input type="text" name="amount" class="txtField" value="<?php echo $row['salaryDesc']; ?>">
+<br>
+Deductions : <br>
+<input type="text" name="deductions" class="txtField" value="<?php echo $row['salaryDesc']; ?>">
+<br>
+Allowances : <br>
+<input type="text" name="allowances" class="txtField" value="<?php echo $row['salaryDesc']; ?>">
+<br>
+Net Salary : <br>
+<input type="text" name="netSalary" class="txtField" value="<?php echo $row['salaryDesc']; ?>">
 <br>
 
 <input type="hidden" name="adminid" class="txtField" value="<?php echo $row['adminID']; ?>">
