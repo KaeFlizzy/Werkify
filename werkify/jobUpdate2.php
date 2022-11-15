@@ -6,7 +6,7 @@ if(count($_POST)>0) {
 mysqli_query($conn,"UPDATE job set 
 jobId= '" . $_POST['jobId'] ."',
 jobName='" . $_POST['jobName'] ."',
-deptId='" . $deptId['deptId'] . "'
+deptId='" . $_POST['deptId'] . "'
   WHERE deptId='" . $_GET['jobId'] . "';");
 $message = "Record Modified Successfully";
 }
@@ -18,7 +18,7 @@ $row= mysqli_fetch_array($result);
 // $row2= mysqli_fetch_array($conn,$sql2);
 $result2 = mysqli_query($conn,"SELECT * FROM department WHERE adminId = '" . $row['adminID'] . "'");
 // $row2 = mysqli_fetch_array($result2);
-$deptId= mysqli_query($conn,"SELECT * FROM department WHERE deptName = '" . $_POST['departmentName'] . "'");
+// $deptId= mysqli_query($conn,"SELECT * FROM department WHERE deptName = '" . $_POST['departmentName'] . "'");
 
 ?>
 <html>
@@ -39,22 +39,35 @@ Job ID: <br>
 Job Title : <br>
 <input type="text" name="deptName" class="txtField" value="<?php echo $row['jobName']; ?>">
 <br>
-Department : <br>
-<select name="departmentName" class="txtField">
-    
+DepartmentID : <br>
+<input type="text" name="deptId" class="txtField" value="<?php echo $row['deptId']; ?>">
+<br>
+Available Departments : <br>
+<!-- <select name="departmentName" class="txtField"> -->
+    <table>
+      <tr>
+        <th>Dept Id</th>
+        <th>Dept Name</th>
+      </tr>
 <?php
 $i=0;
 while($row2 = mysqli_fetch_array($result2)) {
     ?>
-    <option>
+    <tr>
+    <td>
+<?php echo $row2['deptId'] ?>
+</td>
+    <td>
 <?php echo $row2['deptName'] ?>
-</option>
+</td>
+    </tr>
 <?php
 $i++;
 }
 
 ?>
-</select>
+<!-- </select> -->
+    </table>
 <br>
 
 <input type="hidden" name="adminid" class="txtField" value="<?php echo $row['adminID']; ?>">
@@ -70,6 +83,7 @@ function confirm() {
   window.location.assign("organization.php?id=<?php echo $row['adminID']; ?>")
   alert(msg)
 }
+
 
   </script>
 </body>

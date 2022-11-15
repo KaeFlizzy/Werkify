@@ -24,9 +24,9 @@
 </div> 
 <div>
         <h2 >Salary</h2>
-        <button onclick="window.location.assign(salaryAdd.php)">Add New Salary</button>
-        <button onclick="window.location.assign(salaryUpd.php)">Manage Salaries</button>
-    <button onclick="window.location.assign(salaryView.php)">View Salaries</button>
+        <button onclick="window.location.assign('salaryAdd.php?id=<?php echo $_GET['id'] ?>')">Add New Salary</button>
+        <button onclick="window.location.assign('salaryUpdate.php?id=<?php echo $_GET['id'] ?>')">Manage Salaries</button>
+    <button onclick="window.location.assign('salaryView.php?id=<?php echo $_GET['id'] ?>')">View Salaries</button>
 </div>    
 </body>
 </html>

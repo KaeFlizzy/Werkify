@@ -23,32 +23,38 @@
 </form>
 </div>
     <div>
-    <h1>ADD NEW JOB</h1>
-    <form action="jobAdd2.php" method="post" onsubmit="return confirm('Do you want to submit this form?');">
+    <h1>ADD NEW SALARY</h1>
+    <form action="salaryAdd2.php" method="post" onsubmit="return confirm('Do you want to submit this form?');">
     <label>
              
     <input type="hidden" name="adminid" value="<?php echo $_GET['id'] ?>" >
 </label> 
 <label>
-    Job Name<br>
-    <input type="text" name="jobTitle" >
+    Salary Description<br>
+    <input type="text" name="salaryDesc" >
 </label>
-<br><br>
-
+<br>
 <label>
-     Department<br>
-    <select name="deptName">
-    <?php
-			$i=0;
-			while($row = mysqli_fetch_array($result)) {
-			?>
-        <option><?php echo $row["deptName"]; ?> </option>
-        <?php
-        $i++;
-            }
-        ?>
-</select>
-</label><br><br>
+    Gross Amount<br>
+    <input type="text" name="amount" >
+</label>
+<br>
+<label>
+    Allowances<br>
+    <input type="text" name="allowances" >
+</label>
+<br>
+<label>
+    Deductions<br>
+    <input type="text" name="deductions" >
+</label>
+<br>
+<label>
+    Net Amount<br>
+    <input type="text" name="netSalary" >
+</label>
+<br>
+
 <input type="submit" value="Submit" id="submit">
 </form>
 </div>
