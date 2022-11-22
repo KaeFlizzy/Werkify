@@ -25,7 +25,7 @@ $custom_message='You have successfully, registered a new employee';
               $sql3 = "UPDATE admin SET orgid = '".$row['orgID']."' WHERE adminid =$adminID";
               $result3 = mysqli_query($conn, $sql3);
               if (isset($result3)){
-              header("Location: admin.php?adminID=".$adminID."");
+              header("Location: admin.php?id=".$adminID."");
               } 
             }
 

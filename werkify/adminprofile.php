@@ -6,7 +6,7 @@ $result = mysqli_query($conn,"SELECT * FROM admin WHERE adminid = '" . $_GET['id
 <!DOCTYPE html>
 <html>
  <head>
- <title> My Profiles</title>
+ <title> My Profile</title>
  </head>
 <body>
   <div><span><h1>MY PROFILE</h1></span></div>
@@ -17,52 +17,30 @@ $result = mysqli_query($conn,"SELECT * FROM admin WHERE adminid = '" . $_GET['id
 <?php
 
 if (mysqli_num_rows($result) > 0) {
+  $row = mysqli_fetch_array($result)
 ?>
   <table>
   <tr>
   <!-- <td>pic</td> -->
-    <td>adminID</td>
-    <td>Name</td>
-    <td>Username</td>
-    <td>Gender</td>
-    <td>NIN</td>
-    <td>Address</td>
-    <td>Contact</td>
-    <td>Email</td>
-    <td>Nationality</td>
-    <td>Date Of Birth</td>
-    <td>Job Title</td>
-    <td>Department</td>
-    <td>Education Level</td>
-    <td>Account Number</td>
+  <!-- <td><?php //  echo '<img src="data:pic/jpeg;base64,'. base64_encode($i) .'" />'; ?></td> -->
+    <tr><td>adminID</td>
+    <td><?php echo $row["adminID"]; ?></td>
   </tr>
-<?php
-$i=0;
-// $images = array();
-while($row = mysqli_fetch_array($result)) {
-  // $images[] = $row['pic'];
-?>
-<tr>
-<!-- <td><?php //  echo '<img src="data:pic/jpeg;base64,'. base64_encode($i) .'" />'; ?></td> -->
-    <td><?php echo $row["adminId"]; ?></td>
-    <td><?php echo $row["Name"]; ?></td>
-    <td><?php echo $row["username"]; ?></td>
-    <td><?php echo $row["Gender"]; ?></td>
-    <td><?php echo $row["NIN"]; ?></td>
-    <td><?php echo $row["Address"]; ?></td>
-    <td><?php echo $row["Contact"]; ?></td>
-    <td><?php echo $row["Email"]; ?></td>
-    <td><?php echo $row["Nationality"]; ?></td>
-    <td><?php echo $row["DOB"]; ?></td>
-    <td><?php echo $row["Job"]; ?></td>
-    <td><?php echo $row["Department"]; ?></td>
-    <td><?php echo $row["Education"]; ?></td>
-    <td><?php echo $row["Account"]; ?></td>
-</tr>
-<?php
- $i++;
-}
-?>
+    <tr><td>Name</td><td><?php echo $row["name"]; ?></td></tr>
+    <tr><td>Username</td><td><?php echo $row["username"]; ?></td></tr>
+    <tr><td>Gender</td><td><?php echo $row["gender"]; ?></td></tr>
+    <tr><td>NIN</td><td><?php echo $row["nin"]; ?></td></tr>
+    <tr><td>Address</td><td><?php echo $row["address"]; ?></td></tr>
+    <tr><td>Contact</td><td><?php echo $row["contact"]; ?></td></tr>
+    <tr><td>Email</td><td><?php echo $row["email"]; ?></td></tr>
+    <tr><td>Nationality</td><td><?php echo $row["nationality"]; ?></td></tr>
+    <tr><td>Date Of Birth</td><td><?php echo $row["dob"]; ?></td></tr>
+    <tr><td>Job Title</td><td><?php // echo $row["job"]; ?></td></tr>
+    <tr><td>Department</td><td><?php //echo $row["department"]; ?></td></tr>
+    <tr><td>Education Level</td><td><?php echo $row["education"]; ?></td></tr>
+    <tr><td>Account Number</td><td><?php echo $row["account"]; ?></td></tr>
+  </tr>
+
 </table>
  <?php
 }
@@ -73,7 +51,7 @@ else{
 <script>
   const home = document.getElementById("Home")
  home.addEventListener("click",()=>{
-  window.location.assign("admin.php")
+  window.location.assign("admin.php?id=<?php echo $row["adminID"] ?>")
   console.log("button clicked")
  })
   </script>

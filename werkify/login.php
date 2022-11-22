@@ -37,10 +37,10 @@ if(mysqli_num_rows($result)===1) {
         $_SESSION['adminID'] = $row['adminID'];
         if(isset($row['orgID']))
         {
-        header("Location: admin.php?adminID=". $row['adminID']."");
+        header("Location: admin.php?id=". $row['adminID']."");
         exit();
         }else{
-            header("Location: addOrg.php?adminID=". $row['adminID']."");
+            header("Location: addOrg.php?id=". $row['adminID']."");
             exit();
         }
     }

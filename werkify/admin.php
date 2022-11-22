@@ -2,8 +2,9 @@
 session_start();
 if(isset($_SESSION['adminID']) && isset($_SESSION['username'])) {
 include_once 'db_conn.php';
-$result = mysqli_query($conn,"SELECT adminID FROM admin WHERE adminid = '".$_GET['adminID']."' ");
-
+$result = mysqli_query($conn,"SELECT adminID FROM admin WHERE adminid = '".$_GET['id']."' ");
+$result2= mysqli_query($conn,"SELECT COUNT(empID) as no FROM employee WHERE adminid ='".$_GET['id']."'");
+$row2=mysqli_fetch_assoc($result2);
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ $result = mysqli_query($conn,"SELECT adminID FROM admin WHERE adminid = '".$_GET
     $row = mysqli_fetch_array($result)
 ?>
     <div class="topbar">
-    <span class="icon"><img  src="images/logo.jpeg" height="150px" ></span>
+    <span class="icon"><a href="admin.php?id=<?php echo $_GET["id"] ?>"><img  src="images/logo.jpeg" height="150px" ></a></span>
         <span style="font-size:24px;font-weight:bold;">COMPANY NAME</span>
         <span><input type="text" placeholder="Search....." class=" search"></span>
         <span class="icon"><button>SEARCH</button></span>
@@ -49,7 +50,10 @@ $result = mysqli_query($conn,"SELECT adminID FROM admin WHERE adminid = '".$_GET
 </div>
             <div class="right-dashboard">
                 <div><h2>&nbsp;&nbsp;&nbsp;DashBoard<h2></div>
-                <div></div>
+                <div>
+                    <h2>EMPLOYEES</h2>
+                    <h4><?php echo $row2['no'];  ?></h4>
+                </div>
                 
     <div class="Inbox">
         <h3>Inbox</h3>

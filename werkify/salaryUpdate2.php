@@ -49,7 +49,7 @@ Net Salary : <br>
 
 <input type="submit" name="submit" value="Update" class="button">
 <br>
-<td><a href="deleteEmployee2.php?id=<?php echo $row["empID"]; ?>">Delete Record</a></td>
+<td><a href="salaryDelete.php?salaryId=<?php echo $row["salaryId"]; ?>">Delete Record</a></td>
 </form>
 <script>
   const msg="Record Successfully Modified!"
