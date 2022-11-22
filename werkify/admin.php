@@ -26,9 +26,9 @@ $row2=mysqli_fetch_assoc($result2);
 ?>
     <div class="topbar">
     <span class="icon"><a href="admin.php?id=<?php echo $_GET["id"] ?>"><img  src="images/logo.jpeg" height="150px" ></a></span>
-        <span style="font-size:24px;font-weight:bold;">COMPANY NAME</span>
-        <span><input type="text" placeholder="Search....." class=" search"></span>
-        <span class="icon"><button>SEARCH</button></span>
+        <span class="name" >COMPANY NAME</span>
+        <span><input type="text" id="searchbar" placeholder="Search....." class=" search"><img class="icon" id="search" src="images/search.png"></span>
+        <span class="icon" id="searchbar"><button>SEARCH</button></span>
         <span class="icon"><img  src="images/inbox1.png" ></span>
         <span class="icon"><img  src="images/help3.png" ></span>
         <span class="icon"><img  src="images/setting1.png" ></span>
