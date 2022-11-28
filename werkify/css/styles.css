@@ -1,6 +1,7 @@
 body{
     box-sizing: border-box;
     width: 100%;
+    overflow: hidden;
 }
 .topbar{
     display: grid;
@@ -11,16 +12,17 @@ body{
     box-shadow: 0px 5px 5px 2px gray;
 }
 @media only screen and (max-width: 768px){
-    .icon img{
-        width:20px;
+    .topbar .icon img{
+        width:30px !important;
+        height: 30px !important;
 
 
     }
     .topbar{
         display: grid;
         width: 100%;
-        grid-template-columns: 50px 120px 40px 40px 40px 40px 40px 40px;
-        background-color: black;
+        grid-template-columns: 45px 130px 45px 45px 45px 45px 45px 45px;
+        background-color: white;
         color: #00bfff;
         padding: 10px 5px 10px 20px;
         box-shadow: 0px 5px 5px 2px gray;
@@ -29,14 +31,17 @@ body{
     }
     .container{
         display: grid;
-    grid-template-columns: 30vw 70vw;
+    grid-template-columns: 10vw 85vw !important;
     align-items: baseline;
     }
     #searchbar{
         display: none;
     }
     #search{
-        display: inline-block;
+        display: inline-block !important;
+    }
+    .container  .left-dashboard p img{
+        width: 30px !important;
     }
 }
 .name{
@@ -74,7 +79,7 @@ body{
     height: 40px;
 }
 .search {
-    margin-top: 20px;
+    margin-top: 0px;
     width: 10vw;
     padding: 5px 10px;
     border-radius: 10px;

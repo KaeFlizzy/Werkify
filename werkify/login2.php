@@ -10,8 +10,11 @@
 <body>
     
     <div class="topbar">
-        <h2>WERKIFY</h2>
-        <p>Your Human Resource Manager</p>
+    <span class="icon">
+        <img  src="images/logo.jpeg" height="100px" ></span>
+        <span><h2>WERKIFY</h2>
+        <p>Your Human Resource Manager</p></span>
+        
         </div>
         <div class="container">
     <form action="login.php" method="post">

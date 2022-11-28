@@ -42,5 +42,19 @@
             <button onclick="window.location.assign('signup.php')">Sign Up</button>
         </div>
         </div>
+        <footer>
+	  	<div id="parent">
+				<div id="child1">
+					<h6>Aboutus</h6>
+					<p>We are a system that enables<br> employees to get salary. <br>Also enables people to<br> apply for a job. </p>
+				</div>
+				<div id="child2">
+					<h7>Contact</h7>
+					<p>Contact us on<br> Tel 0774222076.<br> Facebook. <br>Twitter @werkify. <br>Whatsapp +256756857648</p>
+				</div>
+			</div>
+			<br><br><br>
+			<h4>Copy rights &copy werkify, all rights reserved 2022.</h4>
+	  </footer>
 </body>
 </html>

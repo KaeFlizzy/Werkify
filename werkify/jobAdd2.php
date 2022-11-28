@@ -15,7 +15,7 @@ $custom_message='You have successfully, registered a new job';
             if (isset($result))
             {
 
-              header("Location:admin.php?adminID=".$adminid);
+              header("Location:admin.php?id=".$adminid);
 
             }
 

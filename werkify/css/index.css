@@ -1,12 +1,15 @@
 body{
     box-sizing: border-box;
     width: 100%;
+    overflow: hidden;
 }
 .topbar{
     background-color: #ffffff;
     color: #00bfff;
     padding: 10px;
     width: 100%;
+    display: grid;
+    grid-template-columns: 200px auto;
 }
 
 .container {

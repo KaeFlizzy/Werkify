@@ -5,9 +5,24 @@ $result = mysqli_query($conn,"SELECT * FROM employee WHERE adminid ='". $_GET['i
 <!DOCTYPE html>
 <html>
  <head>
+ <link rel="stylesheet" href="css/styles.css" type="text/css">
+ <link rel="stylesheet" href="css/forms.css" type="text/css">
+
  <title> Retrive data</title>
  </head>
 <body>
+<div class="topbar">
+    <span class="icon"><a href="admin.php?id=<?php echo $_GET["id"] ?>"><img  src="images/logo.jpeg" height="150px" ></a></span>
+        <span class="name" >COMPANY NAME</span>
+        <span class="icon"><input type="text" id="searchbar" placeholder="Search....." class=" search"><img  id="search" src="images/search.png"></span>
+        <span class="icon" id="searchbar"><button>SEARCH</button></span>
+        <span class="icon"><img  src="images/inbox1.png" ></span>
+        <span class="icon"><img  src="images/help3.png" ></span>
+        <span class="icon"><img  src="images/setting1.png" ></span>
+        <span class="icon"><a href="adminprofile.php?id=<?php echo $row["adminID"]; ?>"><img  src="images/profile.png" ></a></span>
+        <!-- <span class="icon"><a href="adminprofile.php"><img  src="images/profile.png" ></a></span> -->
+
+    </div>
   <div><span><h1>VIEW EMPLOYEES</h1></span></div>
   <button id="Home">Home</button><br>
 <form>
@@ -17,23 +32,23 @@ $result = mysqli_query($conn,"SELECT * FROM employee WHERE adminid ='". $_GET['i
 
 if (mysqli_num_rows($result) > 0) {
 ?>
-  <table>
+  <table cell-spacing="0px" cell-padding="0px">
   <tr>
   <!-- <td>pic</td> -->
-    <td>empID</td>
-    <td>Name</td>
-    <td>Username</td>
-    <td>Gender</td>
-    <td>NIN</td>
-    <td>Address</td>
-    <td>Contact</td>
-    <td>Email</td>
-    <td>Nationality</td>
-    <td>Date Of Birth</td>
-    <td>Job Title</td>
-    <td>Department</td>
-    <td>Education Level</td>
-    <td>Account Number</td>
+    <th>empID</th>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Gender</th>
+    <th>NIN</th>
+    <th>Address</th>
+    <th>Contact</th>
+    <th>Email</th>
+    <th>Nationality</th>
+    <th>Date Of Birth</th>
+    <th>Job Title</th>
+    <th>Department</th>
+    <th>Education Level</th>
+    <th>Account Number</th>
   </tr>
 <?php
 $i=0;

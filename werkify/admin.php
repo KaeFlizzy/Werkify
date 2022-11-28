@@ -4,7 +4,11 @@ if(isset($_SESSION['adminID']) && isset($_SESSION['username'])) {
 include_once 'db_conn.php';
 $result = mysqli_query($conn,"SELECT adminID FROM admin WHERE adminid = '".$_GET['id']."' ");
 $result2= mysqli_query($conn,"SELECT COUNT(empID) as no FROM employee WHERE adminid ='".$_GET['id']."'");
+$result3=mysqli_query($conn,"SELECT COUNT(deptID) as no FROM department WHERE adminid ='".$_GET['id']."'");
+$result4=mysqli_query($conn,"SELECT COUNT(jobID) as no FROM job WHERE adminid ='".$_GET['id']."'");
 $row2=mysqli_fetch_assoc($result2);
+$row3=mysqli_fetch_assoc($result3);
+$row4=mysqli_fetch_assoc($result4);
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +31,7 @@ $row2=mysqli_fetch_assoc($result2);
     <div class="topbar">
     <span class="icon"><a href="admin.php?id=<?php echo $_GET["id"] ?>"><img  src="images/logo.jpeg" height="150px" ></a></span>
         <span class="name" >COMPANY NAME</span>
-        <span><input type="text" id="searchbar" placeholder="Search....." class=" search"><img class="icon" id="search" src="images/search.png"></span>
+        <span class="icon"><input type="text" id="searchbar" placeholder="Search....." class=" search"><img  id="search" src="images/search.png"></span>
         <span class="icon" id="searchbar"><button>SEARCH</button></span>
         <span class="icon"><img  src="images/inbox1.png" ></span>
         <span class="icon"><img  src="images/help3.png" ></span>
@@ -50,10 +54,22 @@ $row2=mysqli_fetch_assoc($result2);
 </div>
             <div class="right-dashboard">
                 <div><h2>&nbsp;&nbsp;&nbsp;DashBoard<h2></div>
-                <div>
+                <div></div>
+                <div style="display: grid; width:100%; grid-template-columns:auto auto auto; place-items: center;">
+                <div style="background-color: red; color: white; text-align: center; padding: 10px; margin: 10px;"> 
                     <h2>EMPLOYEES</h2>
-                    <h4><?php echo $row2['no'];  ?></h4>
+                    <h2><?php echo $row2['no'];  ?></h2>
                 </div>
+                <div style="background-color: orange; color: white; text-align: center; padding: 10px; margin: 10px;">
+                    <h2>DEPARTMENTS</h2>
+                    <h2><?php echo $row3['no'];  ?></h2>
+                </div>
+                <div style="background-color: greenyellow; color: white; text-align: center; padding: 10px 40px; margin: 10px;">
+                    <h2>JOBS</h2>
+                    <h2><?php echo $row4['no'];  ?></h4>
+                </div>
+</div>
+<div></div>
                 
     <div class="Inbox">
         <h3>Inbox</h3>

@@ -1,8 +1,27 @@
-.topbar{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    background-color: white;
-    color: #00bfff;
-    padding: 10px 20px;
-    box-shadow: 0px 5px 5px 2px gray;
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+
+}
+table > tr, th{
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin: 0px;
+}
+table > tr, td{
+    padding: 5px 10px;
+    margin: 0px;
+}
+table tr:nth-child(even) {
+    background-color: lightgray;
+}
+.manage {
+    background-color: greenyellow;
+    color: white;
+}
+.manage a{
+    color: aliceblue;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
 }
